@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div id="formulario">
+        <!-- Titulo del formulario-->
+        <div id="titulo_principal">
+            <h2 id="titulo_texto">Registro</h2>
+        </div>
+        <!-- Cuerpo del formulario -->
+        <div id="cuerpo">
+
+            <form action="registro_cliente.php" method="POST">
+                <label id="l1" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+
+                <label id="l2" for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required placeholder="Escribe tus apellidos">
+
+                <label id="l3" for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo electrónico">
+
+                <label id="l4" for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required placeholder="Escribe tu número de Teléfono">
+
+                <label id="l5" for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required placeholder="Escribe tu ciudad">
+
+                <label id="l6" for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required placeholder="Escribe tu dirección">
+
+                <label id="l7" for="nombre_usuario">Nombre de usuario:</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required placeholder="Escribe un nombre de usuario">
+
+                <label id="l8" for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required placeholder="Escribe una contraseña">
+
+                <input type="submit" value="Registrarse">
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        // funcion que muestra un mensaje en un label en el documento HTML
+        function showMessage() {
+            alert("You have been registered");
+            //document.getElementById("mensaje-estado-registro").innerText = "Registro exitoso";
+        }
+
+        function verRegistros() {
+            window.location.href = "registros.php";
+        }
+    </script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        body {
+            background-color: rgb(231, 231, 231); /* Color de fondo */
+            color: black; /* Color de texto */
+        }
+
+
+        #titulo_texto {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #formulario {
+            width: 360px;
+            height: 700px;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*sombra: direccion vertical, grosor, opaco, opaco */
+            box-shadow: 0px 1px 8px 3px darkgray;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos pera los label */
+        form label {
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        /* Estilos para los inputs */
+        form input {
+            border-radius: 12px;
+            width: 290px;
+            height: 35px;
+            margin-bottom: 10px;
+            border-style: none;
+            border: 1px solid darkgray;
+        }
+
+        /* Estilos para el boton */
+        form input[type="submit"] {
+            align-self: center;
+            background-color: rgb(6, 139, 205);
+            border: 1px solid rgb(6, 139, 205);
+            margin-top: 15px;
+            
+        }
+
+        form input[type="submit"]:active {
+            background-color: rgb(146, 208, 255);
+            border: rgb(146, 208, 255);
+        }
+
+
+    </style>
+
+</body>
+
+</html>
